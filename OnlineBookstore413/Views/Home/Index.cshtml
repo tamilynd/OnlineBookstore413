@@ -9,16 +9,18 @@
 <div>
     <table class="table-striped" style="padding-left:20px">
         <!--Create Table header-->
-        <thead class="thead-dark">
-            <th class="d-md-table-cell" style="width:10%">Title</th>
-            <th class="d-md-table-cell" style="width:10%">Author</th>
-            <th class="d-md-table-cell" style="width:10%">Publisher</th>
-            <th class="d-md-table-cell" style="width:10%">ISBN</th>
-            <th class="d-md-table-cell" style="width:10%">Classification</th>
-            <th class="d-md-table-cell" style="width:10%">Category</th>
-            <th class="d-md-table-cell" style="width:10%">Price</th>
-        </thead>
+        <thead class="thead-dark">        </thead>
         <tbody>
+            <tr>
+                <th class="d-md-table-cell" style="width:10%">Title</th>
+                <th class="d-md-table-cell" style="width:10%">Author</th>
+                <th class="d-md-table-cell" style="width:10%">Publisher</th>
+                <th class="d-md-table-cell" style="width:10%">ISBN</th>
+                <th class="d-md-table-cell" style="width:10%">Classification</th>
+                <th class="d-md-table-cell" style="width:10%">Category</th>
+                <th class="d-md-table-cell" style="width:10%">Price</th>
+            </tr>
+        
             <!--Loop through each book in the repository sent to the view-->
             @foreach (var x in Model)
             {
