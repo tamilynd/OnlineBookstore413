@@ -34,7 +34,8 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-0451419439",
                         Classification = "Fiction",
                         Category = "Classic",
-                        Price = 9.95
+                        Price = 9.95,
+                        Pages = 1488
                     },
                     //Team of Rivals
                     new Book
@@ -47,7 +48,8 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-0743270755",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 14.58
+                        Price = 14.58,
+                        Pages = 944
                     },
                     //The Snowball
                     new Book
@@ -59,7 +61,8 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-0553384611",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 21.54
+                        Price = 21.54,
+                        Pages = 832
                     },
                     //American Ulysses
                     new Book
@@ -72,7 +75,8 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-0812981254",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 11.61
+                        Price = 11.61,
+                        Pages = 864
                     },
                     //Unbroken
                     new Book
@@ -84,7 +88,8 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-0812974492",
                         Classification = "Non-Fiction",
                         Category = "Historical",
-                        Price = 13.33
+                        Price = 13.33,
+                        Pages = 528
                     },
                     //The Great Train Robbery
                     new Book
@@ -96,7 +101,8 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-0804171281",
                         Classification = "Fiction",
                         Category = "Historical Fiction",
-                        Price = 15.95
+                        Price = 15.95,
+                        Pages = 288
                     },
                     //Deep Work
                     new Book
@@ -108,7 +114,8 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-1455586691",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 14.99
+                        Price = 14.99,
+                        Pages = 304
                     },
                     //It's Your Ship
                     new Book
@@ -120,7 +127,8 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-1455523023",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 21.66
+                        Price = 21.66,
+                        Pages = 240
                     },
                     //The Virgin Way
                     new Book
@@ -132,7 +140,8 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-1591847984",
                         Classification = "Non-Fiction",
                         Category = "Business",
-                        Price = 29.16
+                        Price = 29.16,
+                        Pages = 400
                     },
                     //Sycamore Row
                     new Book
@@ -144,7 +153,47 @@ namespace OnlineBookstore413.Models
                         ISBN = "978-0553393613",
                         Classification = "Fiction",
                         Category = "Thrillers",
-                        Price = 15.03
+                        Price = 15.03,
+                        Pages = 642
+                    },
+                    //My First Personal Addition: The Way of Kings
+                    new Book
+                    {
+                        Title = "The Way of Kings",
+                        AuthorFirst = "Brandon",
+                        AuthorLast = "Sanderson",
+                        Publisher = "Tor Books",
+                        ISBN = "978-076537667",
+                        Classification = "Fiction",
+                        Category = "Fantasy",
+                        Price = 14.79,
+                        Pages = 1008
+                    },
+                    //My Second Personal addition: Naturally Tan
+                    new Book
+                    {
+                        Title = "Naturally Tan",
+                        AuthorFirst = "Tan",
+                        AuthorLast = "France",
+                        Publisher = "St. Martin's Press",
+                        ISBN = "978-1250208668",
+                        Classification = "Non-Fiction",
+                        Category = "Autobiography",
+                        Price = 27.99,
+                        Pages = 267
+                    },
+                    //My Third Personal Addition: Edenbrooke
+                    new Book
+                    {
+                        Title = "Edenbrooke",
+                        AuthorFirst = "Julianne",
+                        AuthorLast = "Donaldson",
+                        Publisher = "Shadow Mountain",
+                        ISBN = "978-1609089467",
+                        Classification = "Fiction",
+                        Category = "Romance",
+                        Price = 13.89,
+                        Pages = 264
                     }
                 ) ;
 

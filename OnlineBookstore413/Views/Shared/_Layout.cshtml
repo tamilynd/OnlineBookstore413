@@ -7,7 +7,24 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
-    @RenderBody()
+<body class="bg-light">
+    <div class="bg-info text-white p-2">
+        <span class="navbar-light ml-2">TAM'S 413 BOOKSTORE</span>
+    </div>
+    <div class="row m-1 p-1">
+        <div id="blah" class="col-3 text-center">
+            <br />
+            <h1>My Online Bookstore</h1>
+            <br />
+            <div class="alert alert-info" role="alert" style="width:100%">
+                <p>The place where you can get some pretty good suggestions for books to read. It is also a place where Tam gets to practice and display her ASP.NET skills for IS 414.</p>
+            </div>
+            
+        </div>
+
+        <div class="col-9 text-center">
+            @RenderBody()
+        </div>
+    </div>
 </body>
 </html>

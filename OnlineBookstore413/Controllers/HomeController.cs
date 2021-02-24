@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OnlineBookstore413.Models;
+using OnlineBookstore413.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,16 +16,32 @@ namespace OnlineBookstore413.Controllers
 
         private IBookstoreRepository _repository;
 
+        public int PageSize = 5;
+
         public HomeController(ILogger<HomeController> logger, IBookstoreRepository repository)
         {
             _logger = logger;
             _repository = repository;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
-            //Return view and pass the repository info
-            return View(_repository.Books);
+            //Return view and pass the repository info as books, and paging info
+            return View(new BookListViewModel
+            {
+                Books = _repository.Books
+                    .OrderBy(b => b.BookId)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize)
+                ,
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalNumItems = _repository.Books.Count()
+                }
+            });
+                
         }
 
         public IActionResult Privacy()
