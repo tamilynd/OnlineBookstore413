@@ -32,6 +32,10 @@ namespace OnlineBookstore413.Infrastructure
         public PagingInfo PageModel { get; set; }
         public string PageAction { get; set; }
 
+
+        [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
+        public Dictionary<string, object> PageUrlValues { get; set; } = new Dictionary<string, object>();
+
         public bool PageClassesEnabled { get; set; } = false;
         public string PageClass { get; set; }
         public string PageClassNormal { get; set; }
@@ -49,8 +53,11 @@ namespace OnlineBookstore413.Infrastructure
             {
                 //create a tag
                 TagBuilder tag = new TagBuilder("a");
+
+                PageUrlValues["page"] = i;
+
                 //add href of tag
-                tag.Attributes["href"] = urlHelper.Action(PageAction, new { page = i });
+                tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
 
                 if(PageClassesEnabled)
                 {

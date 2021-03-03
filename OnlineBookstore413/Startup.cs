@@ -28,7 +28,7 @@ namespace OnlineBookstore413
             services.AddControllersWithViews();
             services.AddDbContext<Bookstore1DBContext>(options =>
            {
-               options.UseSqlServer(Configuration["ConnectionStrings:BookstoreConnection"]);
+               options.UseSqlite(Configuration["ConnectionStrings:BookstoreConnection"]);
            });
 
             services.AddScoped<IBookstoreRepository, EFBookstoreRepository>();
@@ -56,8 +56,24 @@ namespace OnlineBookstore413
 
             app.UseEndpoints(endpoints =>
             {
+                //Styling that makes the url a little prettier
                 endpoints.MapControllerRoute(
-                    //Styling that makes the url a little prettier
+                    "categorypage",
+                    "{category}/{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute(
+                    "page",
+                    "{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute(
+                    "category",
+                    "{category}",
+                    new { Controller = "Home", action = "Index", page = 1 });
+
+                endpoints.MapControllerRoute(
+                    
                     "pagination",
                     "Books/P{page}",
                     new { Controller = "Home", action = "Index" });
