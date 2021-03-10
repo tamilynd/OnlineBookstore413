@@ -30,5 +30,17 @@
             </container>
         </div>
 
+        <form id="Model.BookId" asp-page="/Checkout" method="post">
+            <input type="hidden" asp-for="BookId" />
+            <!--This will pass back the current url to the page so we can come back to this exact place-->
+            <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+            <span class="card-text p-1">
+                @Model.Title
+                <button type="submit" class="btn-info btn-sm pull-right" style="float:right">
+                    Check Out
+                </button>
+            </span>
+        </form>
+
     </div>
 </div>

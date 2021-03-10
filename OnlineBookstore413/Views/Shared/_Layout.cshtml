@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OnlineBookstore413</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body class="bg-light">
     <div class="bg-info text-white p-2">
-        <span class="navbar-light ml-2">TAM'S 413 BOOKSTORE</span>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">TAM'S BOOKSTORE</div>
+                <div class="col-6 text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row m-1 p-1">
         <div id="blah" class="col-3 text-center">
             <br />
             <h1>My Online Bookstore</h1>
+
             <vc:navigation-menu />
             <br />
             <div class="alert alert-info" role="alert" style="width:100%">
